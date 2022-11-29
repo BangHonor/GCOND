@@ -1,0 +1,97 @@
+Namespace(gpu_id=0, dataset='reddit', dis_metric='ours', epochs=1000, nlayers=2, hidden=256, lr_adj=0.1, lr_feat=0.1, lr_model=0.01, weight_decay=0.0, dropout=0.0, normalize_features=True, keep_ratio=1.0, reduction_rate=0.002, seed=1, alpha=0, debug=0, sgc=1, inner=1, outer=10, option=0, save=1, label_rate=1, r=0.002)
+稀疏矩阵格式为csr sparse
+将大图切分为 1 个小图
+切割开始！
+切割时间为 6 秒
+第 0 个part：
+training/val/test的size为 153932 23699 55334
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 validation set!
+Val set results of amalgamated student model: loss= 0.7155 accuracy= 0.8814
+epoch: 40 validation set!
+Val set results of amalgamated student model: loss= 0.5715 accuracy= 0.9008
+epoch: 60 validation set!
+Val set results of amalgamated student model: loss= 0.5309 accuracy= 0.9096
+epoch: 80 validation set!
+Val set results of amalgamated student model: loss= 0.5241 accuracy= 0.9101
+epoch: 120 validation set!
+Val set results of amalgamated student model: loss= 0.5303 accuracy= 0.9093
+知识蒸馏时长: 129 秒
+TAM算法执行结束！
+Test set results of amalgamated student model: loss= 0.3987 accuracy= 0.9388
+将大图切分为 3 个小图
+切割开始！
+切割时间为 11 秒
+第 0 个part：
+training/val/test的size为 51742 7824 18089
+读取GCN Teacher模型成功！
+第 1 个part：
+training/val/test的size为 49752 8319 19585
+读取GCN Teacher模型成功！
+第 2 个part：
+training/val/test的size为 52438 7556 17660
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 validation set!
+Val set results of amalgamated student model: loss= 0.8964 accuracy= 0.8419
+epoch: 40 validation set!
+Val set results of amalgamated student model: loss= 0.6979 accuracy= 0.8815
+epoch: 60 validation set!
+Val set results of amalgamated student model: loss= 0.6543 accuracy= 0.8924
+epoch: 80 validation set!
+Val set results of amalgamated student model: loss= 0.6405 accuracy= 0.8948
+epoch: 120 validation set!
+Val set results of amalgamated student model: loss= 0.6398 accuracy= 0.8967
+epoch: 160 validation set!
+Val set results of amalgamated student model: loss= 0.6547 accuracy= 0.8954
+知识蒸馏时长: 149 秒
+TAM算法执行结束！
+Test set results of amalgamated student model: loss= 0.5075 accuracy= 0.9295
+将大图切分为 5 个小图
+切割开始！
+切割时间为 12 秒
+第 0 个part：
+training/val/test的size为 32320 4324 9949
+读取GCN Teacher模型成功！
+第 1 个part：
+training/val/test的size为 30005 5022 11566
+读取GCN Teacher模型成功！
+第 2 个part：
+training/val/test的size为 28730 5335 12528
+读取GCN Teacher模型成功！
+第 3 个part：
+training/val/test的size为 31474 4409 10711
+读取GCN Teacher模型成功！
+第 4 个part：
+training/val/test的size为 31403 4609 10580
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 validation set!
+Val set results of amalgamated student model: loss= 1.0163 accuracy= 0.7985
+epoch: 40 validation set!
+Val set results of amalgamated student model: loss= 0.7917 accuracy= 0.8477
+epoch: 60 validation set!
+Val set results of amalgamated student model: loss= 0.7371 accuracy= 0.8652
+epoch: 80 validation set!
+Val set results of amalgamated student model: loss= 0.7241 accuracy= 0.8718
+epoch: 120 validation set!
+Val set results of amalgamated student model: loss= 0.7344 accuracy= 0.8710
+知识蒸馏时长: 110 秒
+TAM算法执行结束！
+Test set results of amalgamated student model: loss= 0.5451 accuracy= 0.9096
+将大图切分为 10 个小图
+切割开始！
+切割时间为 11 秒
+第 0 个part：
+training/val/test的size为 13578 2719 6319
+Traceback (most recent call last):
+  File "/home/xzb/GCond/test_distillation_Identity.py", line 189, in <module>
+    t_models[i].load_state_dict(torch.load(f'/home/xzb/GCond/saved_distillation/GCN_{args.dataset}_{args.reduction_rate}_{args.seed}_{i}_{part}_1000.pt'))
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/xzb/GCond/saved_distillation/GCN_reddit_0.002_1_0_10_1000.pt'

@@ -1,0 +1,11 @@
+Namespace(gpu_id=0, dataset='ogbn-papers100M', dis_metric='ours', epochs=100, nlayers=2, hidden=256, lr_adj=0.01, lr_feat=0.01, lr_model=0.01, weight_decay=0.0, dropout=0.5, normalize_features=True, keep_ratio=1.0, reduction_rate=0.001, seed=1, alpha=0, debug=0, sgc=1, inner=0, outer=20, save=1, model='GCN')
+ogbn-papers100M has been updated.
+Will you update the dataset now? (y/N)
+Traceback (most recent call last):
+  File "/home/xzb/GCond/train_gcond_transduct_large.py", line 65, in <module>
+    data = Transd2Ind_Large(args.dataset, args.keep_ratio)
+  File "/home/xzb/GCond/utils.py", line 231, in __init__
+    dataset = PygNodePropPredDataset(name=name,
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/ogb/nodeproppred/dataset_pyg.py", line 55, in __init__
+    if input('Will you update the dataset now? (y/N)\n').lower() == 'y':
+OSError: [Errno 9] Bad file descriptor

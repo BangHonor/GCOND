@@ -1,0 +1,92 @@
+Namespace(gpu_id=2, dataset='reddit', dis_metric='ours', epochs=1000, nlayers=2, hidden=256, lr_adj=0.1, lr_feat=0.1, lr_model=0.01, weight_decay=0.0, dropout=0.0, normalize_features=True, keep_ratio=1.0, reduction_rate=0.002, seed=1, alpha=0, debug=0, sgc=1, inner=1, outer=10, option=0, save=1, label_rate=1, r=0.002)
+稀疏矩阵格式为csr sparse
+将大图切分为 1 个小图
+切割开始！
+切割时间为 6 秒
+第 0 个part：
+training/val/test的size为 153932 23699 55334
+labels_full: Counter({15: 28272, 3: 15181, 18: 13999, 0: 13101, 38: 12797, 23: 12146, 8: 11187, 19: 10308, 22: 8222, 27: 5962, 40: 5112, 29: 5101, 33: 4960, 10: 4928, 14: 4854, 28: 4673, 31: 4570, 26: 4239, 37: 4233, 35: 4202, 36: 4180, 21: 4066, 6: 3952, 5: 3597, 1: 3550, 34: 3429, 2: 3302, 39: 3099, 11: 2964, 30: 2846, 13: 2731, 17: 2639, 4: 2322, 9: 2246, 7: 2138, 12: 1696, 25: 1659, 20: 1596, 32: 1575, 16: 1003, 24: 328})
+labels_train: Counter({15: 16563, 3: 10593, 18: 9112, 0: 8471, 23: 8155, 8: 7689, 38: 7297, 19: 7093, 22: 5415, 27: 4090, 29: 3864, 33: 3382, 40: 3374, 10: 3346, 28: 3274, 31: 3230, 14: 3137, 26: 2892, 36: 2858, 35: 2849, 37: 2838, 6: 2807, 21: 2802, 5: 2389, 1: 2362, 34: 2279, 2: 2234, 39: 2141, 11: 2010, 13: 1898, 30: 1894, 17: 1653, 4: 1576, 7: 1487, 9: 1461, 25: 1158, 12: 1131, 32: 1101, 20: 1067, 16: 724, 24: 236})
+小图每个分类的节点数: {24: 1, 16: 1, 20: 2, 32: 2, 12: 2, 25: 2, 9: 2, 7: 2, 4: 3, 17: 3, 30: 3, 13: 3, 11: 4, 39: 4, 2: 4, 34: 4, 1: 4, 5: 4, 21: 5, 6: 5, 37: 5, 35: 5, 36: 5, 26: 5, 14: 6, 31: 6, 28: 6, 10: 6, 40: 6, 33: 6, 29: 7, 27: 8, 22: 10, 19: 14, 38: 14, 8: 15, 23: 16, 0: 16, 18: 18, 3: 21, 15: 33}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 5.465041146627287
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.4831 accuracy= 0.8446
+Test: [array([0.84461633]), array([0.])]
+Epoch 50, loss_avg: 1.9434655352336605
+Epoch 100, loss_avg: 1.9388804924197314
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.7879 accuracy= 0.8929
+Test: [array([0.89292298]), array([0.])]
+Epoch 150, loss_avg: 1.9039437270745998
+Epoch 200, loss_avg: 2.0846834322301353
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8027 accuracy= 0.8890
+Test: [array([0.88898327]), array([0.])]
+Epoch 250, loss_avg: 2.0357433133009004
+Epoch 300, loss_avg: 1.9694245873427974
+Epoch 350, loss_avg: 1.9569509738829078
+Epoch 400, loss_avg: 2.0197928824075837
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.7857 accuracy= 0.8846
+Test: [array([0.88464597]), array([0.])]
+Epoch 450, loss_avg: 2.1014211701183783
+Epoch 500, loss_avg: 2.016876332352801
+Epoch 550, loss_avg: 1.9784157729730374
+Epoch 600, loss_avg: 1.9225039412335652
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8080 accuracy= 0.8878
+Test: [array([0.88780858]), array([0.])]
+Epoch 650, loss_avg: 1.9411319546583221
+Epoch 700, loss_avg: 1.9563364354575552
+Epoch 750, loss_avg: 1.9649263800644292
+Epoch 800, loss_avg: 1.934449861107803
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.7891 accuracy= 0.8953
+Test: [array([0.89525427]), array([0.])]
+Epoch 850, loss_avg: 2.0127117808272197
+Epoch 900, loss_avg: 1.9630745399289016
+Epoch 950, loss_avg: 1.9155492363906488
+Epoch 1000, loss_avg: 1.8617399820467322
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.7619 accuracy= 0.8863
+Test: [array([0.88625438]), array([0.])]
+最好的得到小图的迭代轮次为 800
+第i个小图凝聚用时: 42300 秒
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 test model
+Test set results of amalgamated student model: loss= 0.5746 accuracy= 0.9106
+epoch: 40 test model
+Test set results of amalgamated student model: loss= 0.4307 accuracy= 0.9313
+epoch: 60 test model
+Test set results of amalgamated student model: loss= 0.3862 accuracy= 0.9363
+epoch: 80 test model
+Test set results of amalgamated student model: loss= 0.3720 accuracy= 0.9377
+epoch: 120 test model
+Test set results of amalgamated student model: loss= 0.3639 accuracy= 0.9383
+epoch: 160 test model
+Test set results of amalgamated student model: loss= 0.3668 accuracy= 0.9387
+epoch: 200 test model
+Test set results of amalgamated student model: loss= 0.3717 accuracy= 0.9389
+epoch: 300 test model
+Test set results of amalgamated student model: loss= 0.3893 accuracy= 0.9380
+epoch: 400 test model
+Test set results of amalgamated student model: loss= 0.4084 accuracy= 0.9372
+epoch: 500 test model
+Test set results of amalgamated student model: loss= 0.4971 accuracy= 0.9172
+epoch: 600 test model
+Test set results of amalgamated student model: loss= 0.4415 accuracy= 0.9345
+epoch: 700 test model
+Test set results of amalgamated student model: loss= 0.4579 accuracy= 0.9337
+epoch: 800 test model
+Test set results of amalgamated student model: loss= 0.4694 accuracy= 0.9333
+epoch: 900 test model
+Test set results of amalgamated student model: loss= 0.4799 accuracy= 0.9326
+epoch: 1000 test model
+Test set results of amalgamated student model: loss= 0.4924 accuracy= 0.9312
+知识蒸馏时长: 867 秒
+TAM算法执行结束！
+蒸馏前：
+Test set results of teacher model: loss= 0.7891 accuracy= 0.8953

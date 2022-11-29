@@ -1,0 +1,11 @@
+torch-sparse==0.6.14
+torch-spline-conv==1.2.1
+torchaudio==0.12.0
+torchvision==0.13.0
+tqdm==4.64.0
+transformers==4.21.0
+typer==0.6.1
+virtualenv==20.16.2
+wcwidth==0.2.5
+wrapt==1.14.1
+zipp==3.8.1

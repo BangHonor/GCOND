@@ -1,0 +1,514 @@
+Namespace(gpu_id=0, dataset='reddit', dis_metric='ours', epochs=1000, nlayers=2, hidden=256, lr_adj=0.1, lr_feat=0.1, lr_model=0.01, weight_decay=0.0, dropout=0.0, normalize_features=True, keep_ratio=1.0, reduction_rate=0.002, seed=1, alpha=0, debug=0, sgc=1, inner=1, outer=10, option=0, save=1, label_rate=1, r=0.002)
+稀疏矩阵格式为csr sparse
+将大图切分为 3 个小图
+切割开始！
+切割时间为 10 秒
+第 0 个part：
+training/val/test的size为 51742 7824 18089
+labels_full: Counter({3: 15174, 18: 13878, 0: 12867, 38: 12733, 29: 4875, 28: 4659, 6: 3812, 1: 3483, 9: 2212, 22: 960, 23: 451, 39: 272, 19: 255, 24: 237, 32: 204, 7: 188, 27: 183, 15: 167, 30: 156, 13: 109, 25: 105, 40: 100, 37: 74, 8: 54, 26: 51, 16: 43, 36: 43, 10: 41, 21: 41, 31: 39, 2: 38, 33: 33, 35: 31, 4: 26, 5: 14, 14: 13, 17: 10, 20: 10, 34: 9, 11: 5})
+labels_train: Counter({3: 10587, 18: 9024, 0: 8305, 38: 7275, 29: 3680, 28: 3264, 6: 2711, 1: 2306, 9: 1441, 22: 751, 23: 367, 39: 222, 19: 206, 24: 173, 32: 160, 27: 146, 15: 144, 30: 124, 7: 120, 13: 86, 25: 78, 37: 67, 40: 63, 8: 52, 26: 46, 36: 38, 10: 37, 16: 36, 21: 36, 2: 33, 31: 32, 33: 29, 35: 27, 4: 25, 5: 12, 14: 11, 17: 9, 20: 8, 34: 7, 11: 4})
+小图每个分类的节点数: {11: 1, 34: 1, 20: 1, 17: 1, 14: 1, 5: 1, 4: 1, 35: 1, 33: 1, 31: 1, 2: 1, 16: 1, 21: 1, 10: 1, 36: 1, 26: 1, 8: 1, 40: 1, 37: 1, 25: 1, 13: 1, 7: 1, 30: 1, 15: 1, 27: 1, 32: 1, 24: 1, 19: 1, 39: 1, 23: 1, 22: 1, 9: 2, 1: 4, 6: 5, 28: 6, 29: 7, 38: 14, 0: 16, 18: 18, 3: 21}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 3.4832558050388243
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8043 accuracy= 0.9277
+Test: [array([0.92769086]), array([0.])]
+Epoch 50, loss_avg: 0.9329086489793731
+Epoch 100, loss_avg: 0.9105807978932451
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4003 accuracy= 0.9490
+Test: [array([0.94897451]), array([0.])]
+Epoch 150, loss_avg: 0.8689685542409012
+Epoch 200, loss_avg: 0.9972192717761528
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4086 accuracy= 0.9473
+Test: [array([0.94731605]), array([0.])]
+Epoch 250, loss_avg: 1.1808841798363663
+Epoch 300, loss_avg: 0.9778176330938572
+Epoch 350, loss_avg: 0.9034626704890554
+Epoch 400, loss_avg: 1.0367814645534608
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4027 accuracy= 0.9481
+Test: [array([0.94809]), array([0.])]
+Epoch 450, loss_avg: 0.9024070181497713
+Epoch 500, loss_avg: 0.9437379464870546
+Epoch 550, loss_avg: 0.9321442813408084
+Epoch 600, loss_avg: 0.9539455041652772
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.3856 accuracy= 0.9472
+Test: [array([0.9471502]), array([0.])]
+Epoch 650, loss_avg: 1.0150067910915468
+Epoch 700, loss_avg: 1.0138865819791467
+Epoch 750, loss_avg: 0.908540548929354
+Epoch 800, loss_avg: 0.9147749272788444
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.3985 accuracy= 0.9473
+Test: [array([0.94726077]), array([0.])]
+Epoch 850, loss_avg: 0.9469778898285657
+Epoch 900, loss_avg: 0.9424240670553068
+Epoch 950, loss_avg: 0.9323153472528225
+Epoch 1000, loss_avg: 0.8856299237507146
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4183 accuracy= 0.9477
+Test: [array([0.94770302]), array([0.])]
+最好的得到小图的迭代轮次为 100
+第i个小图凝聚用时: 9644 秒
+读取GCN Teacher模型成功！
+第 1 个part：
+training/val/test的size为 49752 8319 19585
+labels_full: Counter({15: 27914, 40: 4942, 22: 4837, 14: 4811, 31: 4473, 35: 4155, 36: 4062, 26: 4027, 37: 3778, 39: 2143, 13: 2083, 30: 2007, 7: 1892, 20: 1567, 25: 1468, 32: 983, 16: 683, 27: 597, 19: 299, 23: 166, 29: 123, 0: 121, 6: 74, 18: 74, 24: 68, 4: 48, 8: 35, 33: 32, 1: 30, 2: 27, 17: 24, 38: 23, 10: 23, 9: 19, 21: 16, 5: 14, 11: 5, 28: 5, 34: 4, 12: 3, 3: 1})
+labels_train: Counter({15: 16301, 40: 3263, 31: 3156, 14: 3108, 22: 3104, 35: 2814, 36: 2767, 26: 2725, 37: 2522, 39: 1447, 13: 1423, 7: 1334, 30: 1310, 20: 1049, 25: 1011, 32: 678, 16: 490, 27: 391, 19: 210, 23: 116, 29: 100, 0: 83, 6: 51, 18: 50, 24: 46, 4: 31, 8: 26, 1: 24, 33: 24, 2: 17, 10: 13, 17: 12, 21: 12, 38: 12, 5: 10, 9: 10, 28: 4, 34: 3, 11: 2, 12: 2, 3: 1})
+小图每个分类的节点数: {3: 1, 11: 1, 12: 1, 34: 1, 28: 1, 5: 1, 9: 1, 17: 1, 21: 1, 38: 1, 10: 1, 2: 1, 1: 1, 33: 1, 8: 1, 4: 1, 24: 1, 18: 1, 6: 1, 0: 1, 29: 1, 23: 1, 19: 1, 27: 1, 16: 1, 32: 1, 25: 2, 20: 2, 30: 2, 7: 2, 13: 2, 39: 2, 37: 5, 26: 5, 36: 5, 35: 5, 22: 6, 14: 6, 31: 6, 40: 6, 15: 32}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 2.46305073063548
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.8361 accuracy= 0.8807
+Test: [array([0.88067399]), array([0.])]
+Epoch 50, loss_avg: 0.8404357444949266
+Epoch 100, loss_avg: 0.8082935612376143
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8714 accuracy= 0.9067
+Test: [array([0.90666326]), array([0.])]
+Epoch 150, loss_avg: 0.7805166384068931
+Epoch 200, loss_avg: 0.792565606280071
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8612 accuracy= 0.9042
+Test: [array([0.90416135]), array([0.])]
+Epoch 250, loss_avg: 0.7809461965793516
+Epoch 300, loss_avg: 0.8056076282408179
+Epoch 350, loss_avg: 0.7722938770201148
+Epoch 400, loss_avg: 0.8261029545853777
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8906 accuracy= 0.9082
+Test: [array([0.90819505]), array([0.])]
+Epoch 450, loss_avg: 0.7516567416307403
+Epoch 500, loss_avg: 0.8154053199581983
+Epoch 550, loss_avg: 0.8576964169013791
+Epoch 600, loss_avg: 0.8319948522056021
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8310 accuracy= 0.9078
+Test: [array([0.90778657]), array([0.])]
+Epoch 650, loss_avg: 0.8357264541998142
+Epoch 700, loss_avg: 0.8067761165339772
+Epoch 750, loss_avg: 0.8601607764639505
+Epoch 800, loss_avg: 0.8602248494218036
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9550 accuracy= 0.9124
+Test: [array([0.91238192]), array([0.])]
+Epoch 850, loss_avg: 0.7544660242592416
+Epoch 900, loss_avg: 0.7803804025417421
+Epoch 950, loss_avg: 0.7853272554351063
+Epoch 1000, loss_avg: 0.7812013626098633
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8477 accuracy= 0.9095
+Test: [array([0.90947153]), array([0.])]
+最好的得到小图的迭代轮次为 800
+第i个小图凝聚用时: 12843 秒
+读取GCN Teacher模型成功！
+第 2 个part：
+training/val/test的size为 52438 7556 17660
+labels_full: Counter({23: 11529, 8: 11098, 19: 9754, 27: 5182, 33: 4895, 10: 4864, 21: 4009, 5: 3569, 34: 3416, 2: 3237, 11: 2954, 17: 2605, 22: 2425, 4: 2248, 12: 1693, 39: 684, 30: 683, 13: 539, 32: 388, 37: 381, 16: 277, 15: 191, 26: 161, 0: 113, 29: 103, 25: 86, 36: 75, 40: 70, 6: 66, 31: 58, 7: 58, 18: 47, 38: 41, 1: 37, 14: 30, 24: 23, 20: 19, 35: 16, 9: 15, 28: 9, 3: 6})
+labels_train: Counter({23: 7672, 8: 7611, 19: 6677, 27: 3553, 33: 3329, 10: 3296, 21: 2754, 5: 2367, 34: 2269, 2: 2184, 11: 2004, 17: 1632, 22: 1560, 4: 1520, 12: 1129, 39: 472, 30: 460, 13: 389, 32: 263, 37: 249, 16: 198, 26: 121, 15: 118, 29: 84, 0: 83, 25: 69, 36: 53, 40: 48, 6: 45, 31: 42, 18: 38, 7: 33, 1: 32, 14: 18, 24: 17, 9: 10, 38: 10, 20: 10, 35: 8, 28: 6, 3: 5})
+小图每个分类的节点数: {3: 1, 28: 1, 35: 1, 9: 1, 38: 1, 20: 1, 24: 1, 14: 1, 1: 1, 7: 1, 18: 1, 31: 1, 6: 1, 40: 1, 36: 1, 25: 1, 0: 1, 29: 1, 15: 1, 26: 1, 16: 1, 37: 1, 32: 1, 13: 1, 30: 1, 39: 1, 12: 2, 4: 3, 22: 3, 17: 3, 11: 4, 2: 4, 34: 4, 5: 4, 21: 5, 10: 6, 33: 6, 27: 7, 19: 13, 8: 15, 23: 15}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 5.273007611530583
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.1197 accuracy= 0.7973
+Test: [array([0.79733862]), array([0.])]
+Epoch 50, loss_avg: 1.4629824847709842
+Epoch 100, loss_avg: 1.4899008867217274
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9687 accuracy= 0.8615
+Test: [array([0.8614949]), array([0.])]
+Epoch 150, loss_avg: 1.6550580745790062
+Epoch 200, loss_avg: 1.5323635845649533
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.2791 accuracy= 0.8649
+Test: [array([0.86494904]), array([0.])]
+Epoch 250, loss_avg: 1.5048264480218654
+Epoch 300, loss_avg: 1.5546151044892103
+Epoch 350, loss_avg: 1.6265877700433498
+Epoch 400, loss_avg: 1.5239960647210842
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9453 accuracy= 0.8254
+Test: [array([0.82536806]), array([0.])]
+Epoch 450, loss_avg: 1.5628236351943599
+Epoch 500, loss_avg: 1.6223153835389672
+Epoch 550, loss_avg: 1.6558029546970274
+Epoch 600, loss_avg: 1.5256549090873905
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8829 accuracy= 0.8746
+Test: [array([0.87457531]), array([0.])]
+Epoch 650, loss_avg: 1.6176169232624333
+Epoch 700, loss_avg: 1.6199238753900296
+Epoch 750, loss_avg: 1.5070810643638053
+Epoch 800, loss_avg: 1.604289264213748
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8896 accuracy= 0.8578
+Test: [array([0.85775764]), array([0.])]
+Epoch 850, loss_avg: 1.6175139543486805
+Epoch 900, loss_avg: 1.6038362828696646
+Epoch 950, loss_avg: 1.4817421052514053
+Epoch 1000, loss_avg: 1.6129843828154773
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9496 accuracy= 0.8507
+Test: [array([0.8506795]), array([0.])]
+最好的得到小图的迭代轮次为 600
+第i个小图凝聚用时: 15784 秒
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 test model
+Test set results of amalgamated student model: loss= 0.7335 accuracy= 0.8814
+epoch: 40 test model
+Test set results of amalgamated student model: loss= 0.5542 accuracy= 0.9178
+epoch: 60 test model
+Test set results of amalgamated student model: loss= 0.5165 accuracy= 0.9276
+epoch: 80 test model
+Test set results of amalgamated student model: loss= 0.5025 accuracy= 0.9302
+epoch: 120 test model
+Test set results of amalgamated student model: loss= 0.4972 accuracy= 0.9300
+epoch: 160 test model
+Test set results of amalgamated student model: loss= 0.5041 accuracy= 0.9293
+epoch: 200 test model
+Test set results of amalgamated student model: loss= 0.5175 accuracy= 0.9277
+epoch: 300 test model
+Test set results of amalgamated student model: loss= 0.5596 accuracy= 0.9223
+epoch: 400 test model
+Test set results of amalgamated student model: loss= 0.5983 accuracy= 0.9169
+epoch: 500 test model
+Test set results of amalgamated student model: loss= 0.6368 accuracy= 0.9116
+epoch: 600 test model
+Test set results of amalgamated student model: loss= 0.6333 accuracy= 0.9127
+epoch: 700 test model
+Test set results of amalgamated student model: loss= 0.6611 accuracy= 0.9075
+epoch: 800 test model
+Test set results of amalgamated student model: loss= 0.6859 accuracy= 0.9015
+epoch: 900 test model
+Test set results of amalgamated student model: loss= 0.7090 accuracy= 0.8977
+epoch: 1000 test model
+Test set results of amalgamated student model: loss= 0.7418 accuracy= 0.8911
+知识蒸馏时长: 473 秒
+TAM算法执行结束！
+将大图切分为 5 个小图
+切割开始！
+切割时间为 12 秒
+第 0 个part：
+training/val/test的size为 32320 4324 9949
+labels_full: Counter({3: 15169, 28: 4655, 35: 4117, 21: 3998, 36: 3971, 6: 3820, 1: 3457, 9: 2187, 22: 2034, 32: 554, 23: 464, 7: 253, 27: 240, 24: 229, 39: 187, 19: 152, 13: 141, 30: 138, 15: 126, 29: 106, 37: 71, 40: 68, 0: 52, 2: 48, 18: 47, 16: 46, 10: 36, 8: 34, 38: 34, 33: 31, 26: 29, 4: 25, 31: 22, 25: 15, 14: 9, 5: 8, 20: 6, 34: 6, 17: 6, 11: 2})
+labels_train: Counter({3: 10581, 28: 3260, 35: 2797, 21: 2750, 6: 2711, 36: 2696, 1: 2290, 9: 1425, 22: 1410, 32: 399, 23: 360, 27: 168, 24: 165, 7: 164, 39: 147, 19: 123, 13: 107, 15: 98, 30: 92, 29: 84, 37: 62, 0: 47, 40: 46, 16: 41, 18: 40, 2: 34, 8: 32, 38: 30, 10: 29, 33: 26, 26: 26, 4: 19, 31: 18, 25: 13, 5: 8, 14: 7, 20: 5, 34: 5, 17: 3, 11: 2})
+小图每个分类的节点数: {11: 1, 17: 1, 20: 1, 34: 1, 14: 1, 5: 1, 25: 1, 31: 1, 4: 1, 33: 1, 26: 1, 10: 1, 38: 1, 8: 1, 2: 1, 18: 1, 16: 1, 40: 1, 0: 1, 37: 1, 29: 1, 30: 1, 15: 1, 13: 1, 19: 1, 39: 1, 7: 1, 24: 1, 27: 1, 23: 1, 32: 1, 22: 2, 9: 2, 1: 4, 36: 5, 6: 5, 21: 5, 35: 5, 28: 6, 3: 21}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 2.5963668823242188
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.7960 accuracy= 0.8792
+Test: [array([0.87918384]), array([0.])]
+Epoch 50, loss_avg: 0.6008092508083437
+Epoch 100, loss_avg: 0.4726624651653011
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4178 accuracy= 0.9443
+Test: [array([0.94431601]), array([0.])]
+Epoch 150, loss_avg: 0.4890618556883277
+Epoch 200, loss_avg: 0.5413641883105766
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4580 accuracy= 0.9428
+Test: [array([0.94280832]), array([0.])]
+Epoch 250, loss_avg: 0.5204266292292897
+Epoch 300, loss_avg: 0.7324806445982398
+Epoch 350, loss_avg: 0.487850086863448
+Epoch 400, loss_avg: 0.47894682535311073
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4563 accuracy= 0.9433
+Test: [array([0.94331089]), array([0.])]
+Epoch 450, loss_avg: 0.5329109982746404
+Epoch 500, loss_avg: 0.47814810915691097
+Epoch 550, loss_avg: 0.49589378077809404
+Epoch 600, loss_avg: 0.4919660312373464
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4254 accuracy= 0.9439
+Test: [array([0.94391396]), array([0.])]
+Epoch 650, loss_avg: 0.5446590493365032
+Epoch 700, loss_avg: 0.5547116000477861
+Epoch 750, loss_avg: 0.4911925664762171
+Epoch 800, loss_avg: 0.5189191515852766
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4090 accuracy= 0.9413
+Test: [array([0.94130063]), array([0.])]
+Epoch 850, loss_avg: 0.5104135397003918
+Epoch 900, loss_avg: 0.5473215894001286
+Epoch 950, loss_avg: 0.5048871738154713
+Epoch 1000, loss_avg: 0.5202009201049804
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4469 accuracy= 0.9381
+Test: [array([0.93808423]), array([0.])]
+最好的得到小图的迭代轮次为 100
+第i个小图凝聚用时: 9889 秒
+读取GCN Teacher模型成功！
+第 1 个part：
+training/val/test的size为 30005 5022 11566
+labels_full: Counter({18: 13858, 0: 12881, 38: 12716, 29: 4844, 22: 470, 19: 235, 39: 190, 30: 144, 23: 132, 25: 128, 27: 112, 15: 91, 40: 85, 13: 85, 32: 62, 37: 53, 1: 46, 6: 43, 7: 39, 36: 38, 26: 33, 9: 30, 8: 29, 24: 29, 31: 26, 10: 25, 16: 25, 2: 24, 21: 21, 35: 21, 33: 13, 4: 13, 17: 9, 5: 9, 28: 8, 3: 7, 14: 6, 34: 5, 20: 5, 11: 3})
+labels_train: Counter({18: 9004, 0: 8307, 38: 7250, 29: 3654, 22: 362, 19: 178, 39: 144, 30: 115, 23: 109, 25: 95, 27: 89, 15: 81, 13: 61, 40: 51, 32: 51, 37: 46, 36: 34, 6: 34, 1: 32, 26: 28, 7: 27, 8: 25, 10: 23, 24: 21, 16: 21, 31: 21, 2: 20, 21: 18, 9: 18, 35: 18, 33: 13, 4: 12, 28: 7, 3: 7, 17: 7, 5: 7, 14: 6, 34: 4, 20: 3, 11: 2})
+小图每个分类的节点数: {11: 1, 20: 1, 34: 1, 14: 1, 28: 1, 3: 1, 17: 1, 5: 1, 4: 1, 33: 1, 21: 1, 9: 1, 35: 1, 2: 1, 24: 1, 16: 1, 31: 1, 10: 1, 8: 1, 7: 1, 26: 1, 1: 1, 36: 1, 6: 1, 37: 1, 40: 1, 32: 1, 13: 1, 15: 1, 27: 1, 25: 1, 23: 1, 30: 1, 39: 1, 19: 1, 22: 1, 29: 7, 38: 14, 0: 16, 18: 18}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 3.6480916465201028
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.3511 accuracy= 0.9403
+Test: [array([0.94034238]), array([0.])]
+Epoch 50, loss_avg: 1.772189461312643
+Epoch 100, loss_avg: 1.7878360748291016
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.5088 accuracy= 0.9419
+Test: [array([0.94189867]), array([0.])]
+Epoch 150, loss_avg: 1.699658686940263
+Epoch 200, loss_avg: 1.750387675587724
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.4298 accuracy= 0.9470
+Test: [array([0.94699983]), array([0.])]
+Epoch 250, loss_avg: 1.6907218188774296
+Epoch 300, loss_avg: 1.8001993225841988
+Epoch 350, loss_avg: 1.7642631158596132
+Epoch 400, loss_avg: 1.6982139029153964
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.5717 accuracy= 0.9423
+Test: [array([0.94233097]), array([0.])]
+Epoch 450, loss_avg: 1.6600791558986756
+Epoch 500, loss_avg: 1.7680959096769007
+Epoch 550, loss_avg: 1.7548236846923828
+Epoch 600, loss_avg: 1.6954227540551163
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.5468 accuracy= 0.9443
+Test: [array([0.94431956]), array([0.])]
+Epoch 650, loss_avg: 1.7885051076005145
+Epoch 700, loss_avg: 1.6772133524824933
+Epoch 750, loss_avg: 1.6304310961467463
+Epoch 800, loss_avg: 1.6921870999219941
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.5873 accuracy= 0.9438
+Test: [array([0.9438008]), array([0.])]
+Epoch 850, loss_avg: 1.646902707727944
+Epoch 900, loss_avg: 1.698100727360423
+Epoch 950, loss_avg: 1.6301831129120616
+Epoch 1000, loss_avg: 1.6773353297535967
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.5956 accuracy= 0.9441
+Test: [array([0.94414664]), array([0.])]
+最好的得到小图的迭代轮次为 200
+第i个小图凝聚用时: 13056 秒
+读取GCN Teacher模型成功！
+第 2 个part：
+training/val/test的size为 28730 5335 12528
+labels_full: Counter({15: 27891, 23: 11250, 40: 4885, 22: 808, 13: 308, 39: 187, 27: 175, 30: 153, 19: 148, 16: 99, 32: 71, 25: 61, 37: 59, 7: 57, 29: 48, 4: 40, 0: 35, 26: 35, 33: 32, 2: 28, 6: 26, 18: 24, 8: 23, 36: 22, 31: 13, 14: 12, 35: 12, 17: 12, 38: 12, 24: 11, 10: 10, 5: 8, 1: 7, 21: 7, 20: 7, 9: 7, 11: 4, 34: 3, 28: 2, 3: 1})
+labels_train: Counter({15: 16281, 23: 7476, 40: 3228, 22: 498, 13: 240, 27: 121, 39: 107, 19: 104, 30: 101, 16: 82, 32: 47, 25: 47, 29: 43, 37: 39, 7: 35, 0: 29, 26: 27, 33: 25, 4: 24, 6: 22, 18: 20, 2: 19, 36: 18, 8: 15, 14: 10, 35: 9, 17: 8, 24: 7, 31: 6, 21: 6, 38: 6, 1: 5, 5: 5, 9: 5, 20: 4, 34: 3, 10: 3, 11: 2, 28: 2, 3: 1})
+小图每个分类的节点数: {3: 1, 11: 1, 28: 1, 34: 1, 10: 1, 20: 1, 1: 1, 5: 1, 9: 1, 31: 1, 21: 1, 38: 1, 24: 1, 17: 1, 35: 1, 14: 1, 8: 1, 36: 1, 2: 1, 18: 1, 6: 1, 4: 1, 33: 1, 26: 1, 0: 1, 7: 1, 37: 1, 29: 1, 32: 1, 25: 1, 16: 1, 30: 1, 19: 1, 39: 1, 27: 1, 13: 1, 22: 1, 40: 6, 23: 14, 15: 32}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 1.9172950558546114
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 2.0987 accuracy= 0.9118
+Test: [array([0.91179757]), array([0.])]
+Epoch 50, loss_avg: 0.7847284410057999
+Epoch 100, loss_avg: 0.7880106065331436
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.6804 accuracy= 0.9274
+Test: [array([0.92736271]), array([0.])]
+Epoch 150, loss_avg: 0.7920438859520889
+Epoch 200, loss_avg: 0.7147195490395151
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8909 accuracy= 0.9349
+Test: [array([0.9348659]), array([0.])]
+Epoch 250, loss_avg: 0.7614324709264243
+Epoch 300, loss_avg: 0.7802683202231803
+Epoch 350, loss_avg: 0.7874237665315954
+Epoch 400, loss_avg: 0.7755129465242712
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9790 accuracy= 0.9345
+Test: [array([0.93446679]), array([0.])]
+Epoch 450, loss_avg: 0.7901507261322765
+Epoch 500, loss_avg: 0.7588943900131597
+Epoch 550, loss_avg: 0.7976942388022819
+Epoch 600, loss_avg: 0.7628620287267173
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8809 accuracy= 0.9325
+Test: [array([0.93247126]), array([0.])]
+Epoch 650, loss_avg: 0.7780414023050448
+Epoch 700, loss_avg: 0.7416977533480016
+Epoch 750, loss_avg: 0.8079776205667635
+Epoch 800, loss_avg: 0.7497114786287633
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9594 accuracy= 0.9398
+Test: [array([0.93981481]), array([0.])]
+Epoch 850, loss_avg: 0.8060985239540658
+Epoch 900, loss_avg: 0.7578032330768865
+Epoch 950, loss_avg: 0.7400601922011957
+Epoch 1000, loss_avg: 0.781682158679497
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0526 accuracy= 0.9216
+Test: [array([0.92161558]), array([0.])]
+最好的得到小图的迭代轮次为 800
+第i个小图凝聚用时: 19338 秒
+读取GCN Teacher模型成功！
+第 3 个part：
+training/val/test的size为 31474 4409 10711
+labels_full: Counter({8: 11061, 33: 4823, 31: 4484, 37: 3796, 5: 3550, 34: 3408, 11: 2949, 17: 2590, 22: 2138, 39: 2035, 30: 1772, 25: 1359, 16: 609, 27: 377, 13: 308, 23: 189, 32: 176, 19: 174, 15: 119, 36: 80, 0: 73, 26: 61, 7: 61, 29: 48, 6: 43, 40: 43, 24: 37, 18: 37, 4: 32, 1: 30, 38: 25, 14: 22, 10: 22, 2: 15, 21: 11, 12: 9, 9: 8, 35: 7, 28: 6, 3: 4, 20: 3})
+labels_train: Counter({8: 7586, 33: 3279, 31: 3167, 37: 2530, 5: 2354, 34: 2263, 11: 2000, 17: 1625, 39: 1400, 22: 1392, 30: 1173, 25: 936, 16: 420, 27: 246, 13: 213, 23: 131, 19: 116, 32: 116, 15: 69, 36: 58, 0: 50, 26: 44, 29: 40, 7: 37, 40: 30, 24: 28, 6: 28, 1: 26, 18: 25, 4: 16, 10: 14, 2: 13, 14: 12, 21: 9, 38: 7, 12: 5, 9: 4, 3: 4, 28: 4, 35: 3, 20: 1})
+小图每个分类的节点数: {20: 1, 35: 1, 9: 1, 3: 1, 28: 1, 12: 1, 38: 1, 21: 1, 14: 1, 2: 1, 10: 1, 4: 1, 18: 1, 1: 1, 24: 1, 6: 1, 40: 1, 7: 1, 29: 1, 26: 1, 0: 1, 36: 1, 15: 1, 19: 1, 32: 1, 23: 1, 13: 1, 27: 1, 16: 1, 25: 1, 30: 2, 22: 2, 39: 2, 17: 3, 11: 4, 34: 4, 5: 4, 37: 5, 31: 6, 33: 6, 8: 15}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 4.344697310284871
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.7725 accuracy= 0.8332
+Test: [array([0.83316217]), array([0.])]
+Epoch 50, loss_avg: 1.661562673056998
+Epoch 100, loss_avg: 1.6699301277718892
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0738 accuracy= 0.8584
+Test: [array([0.8583699]), array([0.])]
+Epoch 150, loss_avg: 1.6218669891357422
+Epoch 200, loss_avg: 1.6208391794344275
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0051 accuracy= 0.8863
+Test: [array([0.88628513]), array([0.])]
+Epoch 250, loss_avg: 1.7248007890654773
+Epoch 300, loss_avg: 1.641622115344536
+Epoch 350, loss_avg: 1.5706100929074172
+Epoch 400, loss_avg: 1.7018993656809738
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9136 accuracy= 0.8814
+Test: [array([0.88143031]), array([0.])]
+Epoch 450, loss_avg: 1.559503964679997
+Epoch 500, loss_avg: 1.7146614819038204
+Epoch 550, loss_avg: 1.659773347435928
+Epoch 600, loss_avg: 1.6825262395347036
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0592 accuracy= 0.8708
+Test: [array([0.87078704]), array([0.])]
+Epoch 650, loss_avg: 1.5999661980605706
+Epoch 700, loss_avg: 1.6538655071723751
+Epoch 750, loss_avg: 1.5407542345000476
+Epoch 800, loss_avg: 1.6447825269001286
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0807 accuracy= 0.8757
+Test: [array([0.87573523]), array([0.])]
+Epoch 850, loss_avg: 1.712275221289658
+Epoch 900, loss_avg: 1.668528710342035
+Epoch 950, loss_avg: 1.6215276485536156
+Epoch 1000, loss_avg: 1.637480638085342
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9907 accuracy= 0.8586
+Test: [array([0.85855662]), array([0.])]
+最好的得到小图的迭代轮次为 200
+第i个小图凝聚用时: 17862 秒
+读取GCN Teacher模型成功！
+第 4 个part：
+training/val/test的size为 31403 4609 10580
+labels_full: Counter({19: 9599, 27: 5058, 10: 4835, 14: 4805, 26: 4081, 2: 3187, 22: 2772, 4: 2212, 13: 1889, 7: 1728, 12: 1687, 20: 1575, 32: 712, 30: 639, 39: 500, 37: 254, 16: 224, 23: 111, 25: 96, 36: 69, 33: 61, 0: 60, 29: 55, 35: 45, 15: 45, 8: 40, 18: 33, 40: 31, 21: 29, 31: 25, 17: 22, 5: 22, 24: 22, 6: 20, 9: 14, 38: 10, 1: 10, 34: 7, 11: 6, 28: 2})
+labels_train: Counter({19: 6572, 27: 3466, 10: 3277, 14: 3102, 26: 2767, 2: 2148, 22: 1753, 4: 1505, 13: 1277, 7: 1224, 12: 1126, 20: 1054, 32: 488, 30: 413, 39: 343, 37: 161, 16: 160, 23: 79, 25: 67, 36: 52, 29: 43, 33: 39, 0: 38, 15: 34, 8: 31, 18: 23, 35: 22, 40: 19, 21: 19, 31: 18, 5: 15, 24: 15, 6: 12, 17: 10, 9: 9, 1: 9, 34: 4, 38: 4, 11: 4, 28: 1})
+小图每个分类的节点数: {28: 1, 34: 1, 38: 1, 11: 1, 9: 1, 1: 1, 17: 1, 6: 1, 5: 1, 24: 1, 31: 1, 40: 1, 21: 1, 35: 1, 18: 1, 8: 1, 15: 1, 0: 1, 33: 1, 29: 1, 36: 1, 25: 1, 23: 1, 16: 1, 37: 1, 39: 1, 30: 1, 32: 1, 20: 2, 12: 2, 7: 2, 13: 2, 4: 3, 22: 3, 2: 4, 26: 5, 14: 6, 10: 6, 27: 6, 19: 13}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 4.504820177031727
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0247 accuracy= 0.8275
+Test: [array([0.82750473]), array([0.])]
+Epoch 50, loss_avg: 1.136539533661633
+Epoch 100, loss_avg: 1.2391730424834462
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9104 accuracy= 0.8629
+Test: [array([0.86285444]), array([0.])]
+Epoch 150, loss_avg: 1.2115526152820122
+Epoch 200, loss_avg: 1.2924521283405583
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8847 accuracy= 0.8589
+Test: [array([0.85888469]), array([0.])]
+Epoch 250, loss_avg: 1.2699419347251333
+Epoch 300, loss_avg: 1.2539468625696695
+Epoch 350, loss_avg: 1.2382320031887148
+Epoch 400, loss_avg: 1.1788517742622189
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8617 accuracy= 0.8625
+Test: [array([0.86247637]), array([0.])]
+Epoch 450, loss_avg: 1.2860684185493283
+Epoch 500, loss_avg: 1.2008702254876857
+Epoch 550, loss_avg: 1.2142185676388624
+Epoch 600, loss_avg: 1.2823918598454174
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8597 accuracy= 0.8587
+Test: [array([0.85869565]), array([0.])]
+Epoch 650, loss_avg: 1.1913142692752001
+Epoch 700, loss_avg: 1.2417055920856754
+Epoch 750, loss_avg: 1.1761518710997048
+Epoch 800, loss_avg: 1.221686414392983
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8308 accuracy= 0.8581
+Test: [array([0.85812854]), array([0.])]
+Epoch 850, loss_avg: 1.2387097521526058
+Epoch 900, loss_avg: 1.1236961085621904
+Epoch 950, loss_avg: 1.173844732889315
+Epoch 1000, loss_avg: 1.2283704618128335
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.9290 accuracy= 0.8605
+Test: [array([0.86049149]), array([0.])]
+最好的得到小图的迭代轮次为 100
+第i个小图凝聚用时: 18412 秒
+读取GCN Teacher模型成功！
+开始执行TAM算法！
+epoch: 20 test model
+Test set results of amalgamated student model: loss= 0.8327 accuracy= 0.8305
+epoch: 40 test model
+Test set results of amalgamated student model: loss= 0.6788 accuracy= 0.8768
+epoch: 60 test model
+Test set results of amalgamated student model: loss= 0.6000 accuracy= 0.9034
+epoch: 80 test model
+Test set results of amalgamated student model: loss= 0.5771 accuracy= 0.9079
+epoch: 120 test model
+Test set results of amalgamated student model: loss= 0.5662 accuracy= 0.9071
+epoch: 160 test model
+Test set results of amalgamated student model: loss= 0.5677 accuracy= 0.9051
+epoch: 200 test model
+Test set results of amalgamated student model: loss= 0.5756 accuracy= 0.9017
+epoch: 300 test model
+Test set results of amalgamated student model: loss= 0.6143 accuracy= 0.8875
+epoch: 400 test model
+Test set results of amalgamated student model: loss= 0.6560 accuracy= 0.8747
+epoch: 500 test model
+Test set results of amalgamated student model: loss= 0.6967 accuracy= 0.8658
+epoch: 600 test model
+Test set results of amalgamated student model: loss= 0.7253 accuracy= 0.8619
+epoch: 700 test model
+Test set results of amalgamated student model: loss= 0.7720 accuracy= 0.8539
+epoch: 800 test model
+Test set results of amalgamated student model: loss= 0.7934 accuracy= 0.8520
+epoch: 900 test model
+Test set results of amalgamated student model: loss= 0.8109 accuracy= 0.8508
+epoch: 1000 test model
+Test set results of amalgamated student model: loss= 0.8615 accuracy= 0.8442
+知识蒸馏时长: 1286 秒
+TAM算法执行结束！
+将大图切分为 10 个小图
+切割开始！
+切割时间为 11 秒
+第 0 个part：
+training/val/test的size为 13578 2719 6319
+labels_full: Counter({38: 12661, 0: 4125, 9: 2196, 22: 1542, 7: 254, 32: 241, 39: 176, 19: 144, 25: 136, 15: 136, 27: 134, 30: 125, 18: 84, 26: 83, 40: 80, 13: 79, 37: 61, 23: 55, 16: 53, 6: 35, 8: 28, 29: 22, 5: 22, 10: 16, 35: 16, 36: 16, 31: 14, 33: 13, 4: 11, 2: 10, 21: 10, 1: 8, 24: 7, 14: 5, 17: 4, 34: 4, 3: 3, 28: 3, 12: 2, 20: 2})
+labels_train: Counter({38: 7211, 0: 2445, 9: 1422, 22: 1036, 32: 179, 7: 159, 39: 125, 19: 111, 25: 96, 27: 90, 30: 86, 15: 85, 26: 65, 13: 55, 18: 54, 40: 54, 37: 44, 23: 39, 16: 38, 6: 24, 8: 21, 29: 20, 5: 17, 35: 14, 31: 13, 33: 11, 10: 10, 4: 9, 21: 8, 36: 8, 2: 7, 14: 4, 24: 4, 3: 3, 17: 2, 12: 2, 1: 2, 28: 2, 20: 2, 34: 1})
+小图每个分类的节点数: {34: 1, 17: 1, 12: 1, 1: 1, 28: 1, 20: 1, 3: 1, 14: 1, 24: 1, 2: 1, 21: 1, 36: 1, 4: 1, 10: 1, 33: 1, 31: 1, 35: 1, 5: 1, 29: 1, 8: 1, 6: 1, 16: 1, 23: 1, 37: 1, 18: 1, 40: 1, 13: 1, 26: 1, 15: 1, 30: 1, 27: 1, 25: 1, 19: 1, 39: 1, 7: 1, 32: 1, 22: 2, 9: 2, 0: 4, 38: 14}
+/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch_geometric/deprecation.py:12: UserWarning: 'data.NeighborSampler' is deprecated, use 'loader.NeighborSampler' instead
+  warnings.warn(out)
+Epoch 0, loss_avg: 3.4050511616032297
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0600 accuracy= 0.9168
+Test: [array([0.91675898]), array([0.])]
+Epoch 50, loss_avg: 1.4542816255150772
+Epoch 100, loss_avg: 1.4169208712694121
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 1.0452 accuracy= 0.9250
+Test: [array([0.92498813]), array([0.])]
+Epoch 150, loss_avg: 1.4689713082662443
+Epoch 200, loss_avg: 1.4457372153677592
+存储GCN模型成功！
+Test set results on syn graph's gnn: loss= 0.8546 accuracy= 0.9236
+Test: [array([0.92356386]), array([0.])]
