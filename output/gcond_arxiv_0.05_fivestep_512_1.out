@@ -1,0 +1,42 @@
+Namespace(gpu_id=2, dataset='ogbn-arxiv', dis_metric='ours', epochs=1000, nlayers=2, hidden=256, lr_adj=0.01, lr_feat=0.01, lr_model=0.01, weight_decay=0.0, dropout=0.5, normalize_features=True, keep_ratio=1.0, reduction_rate=0.05, seed=1, alpha=0, debug=0, sgc=1, inner=10, outer=20, save=1, model='GCN')
+pyg_data: Data(num_nodes=169343, x=[169343, 128], node_year=[169343, 1], y=[169343, 1], adj_t=[169343, 169343, nnz=1166243])
+split_index: {'train': tensor([     0,      1,      2,  ..., 169145, 169148, 169251]), 'valid': tensor([   349,    357,    366,  ..., 169185, 169261, 169296]), 'test': tensor([   346,    398,    451,  ..., 169340, 169341, 169342])}
+train val test的长度: 90941 29799 48603
+size of adj_train: (90941, 90941)
+edges in adj_train: 738066.0
+/home/xzb/GCond/gcond_agent_transduct.py:37: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at  /opt/conda/conda-bld/pytorch_1656352660876/work/torch/csrc/utils/tensor_new.cpp:201.)
+  indices = torch.tensor([np.arange(n), np.arange(n)], dtype=torch.int64)
+adj_syn: (4529, 4529) feat_syn: torch.Size([4529, 128])
+开始图凝聚！
+WARNING:root:The OGB package is out of date. Your version is 1.3.4, while the latest version is 1.3.5.
+Epoch 100, 梯度匹配loss_avg: 1.1559947204589844
+Train set results: loss= 1.2923 accuracy= 0.6479
+Test set results: loss= 1.2201 accuracy= 0.6443
+Epoch 200, 梯度匹配loss_avg: 0.9492676162719726
+Train set results: loss= 1.2556 accuracy= 0.6556
+Test set results: loss= 1.2308 accuracy= 0.6235
+Epoch 300, 梯度匹配loss_avg: 0.9197788047790527
+Train set results: loss= 1.2357 accuracy= 0.6573
+Test set results: loss= 1.2183 accuracy= 0.6376
+Epoch 400, 梯度匹配loss_avg: 0.9475372505187988
+Train set results: loss= 1.2390 accuracy= 0.6568
+Test set results: loss= 1.2436 accuracy= 0.6249
+Epoch 500, 梯度匹配loss_avg: 0.9149027061462403
+Train set results: loss= 1.2298 accuracy= 0.6617
+Test set results: loss= 1.2493 accuracy= 0.6325
+Epoch 600, 梯度匹配loss_avg: 0.8736924743652343
+Train set results: loss= 1.2510 accuracy= 0.6598
+Test set results: loss= 1.2199 accuracy= 0.6355
+Epoch 700, 梯度匹配loss_avg: 0.8843731689453125
+Train set results: loss= 1.2447 accuracy= 0.6584
+Test set results: loss= 1.2730 accuracy= 0.6296
+Epoch 800, 梯度匹配loss_avg: 0.9188879203796386
+Train set results: loss= 1.2410 accuracy= 0.6611
+Test set results: loss= 1.2796 accuracy= 0.6271
+Epoch 900, 梯度匹配loss_avg: 0.883184642791748
+Train set results: loss= 1.2525 accuracy= 0.6578
+Test set results: loss= 1.2930 accuracy= 0.6229
+Epoch 1000, 梯度匹配loss_avg: 0.9764977264404296
+Train set results: loss= 1.2210 accuracy= 0.6626
+Test set results: loss= 1.2398 accuracy= 0.6276
+图凝聚用时: 13033 秒

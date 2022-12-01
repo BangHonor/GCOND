@@ -1,0 +1,28 @@
+Namespace(gpu_id=1, dataset='ogbn-papers100M', dis_metric='ours', epochs=2000, nlayers=2, hidden=256, lr_adj=0.01, lr_feat=0.01, lr_model=0.01, weight_decay=0.0, dropout=0.5, normalize_features=True, keep_ratio=1.0, reduction_rate=0.005, seed=1, alpha=0, debug=0, sgc=1, inner=10, outer=20, save=1, model='DeepGCN', deep_layers=28, deep_hidden=128, mlp_layers=1, block='res+', conv='gen', gcn_aggr='softmax_sg', t=0.1, p=1.0, y=0.0, learn_t=False, learn_p=False, learn_y=False, norm='batch', msg_norm=True, learn_msg_scale=True, model_save_path='model_ckpt', model_load_path='ogbn_papers100M_pretrained_model.pth')
+WARNING:root:The OGB package is out of date. Your version is 1.3.4, while the latest version is 1.3.5.
+pyg_data: Data(num_nodes=111059956, x=[111059956, 128], node_year=[111059956, 1], y=[111059956, 1], adj_t=[111059956, 111059956, nnz=1615685872])
+split_index: {'train': tensor([      602,       684,      1384,  ..., 111048965, 111049596,
+        111052523]), 'valid': tensor([    57698,    145220,    599977,  ..., 110949043, 110952576,
+        110996715]), 'test': tensor([    43768,    122141,    251239,  ..., 111059783, 111059927,
+        111059953])}
+train val test的长度: 1207179 125265 214338
+size of adj_train: (1207179, 1207179)
+edges in adj_train: 20024178.0
+adj_syn: (5973, 5973) feat_syn: torch.Size([5973, 128])
+开始图凝聚！
+Traceback (most recent call last):
+  File "/home/xzb/GCond/train_gcond_transduct.py", line 105, in <module>
+    agent.train()
+  File "/home/xzb/GCond/gcond_agent_transduct.py", line 114, in train
+    adj_syn = self.pge(self.feat_syn)#PGE算法得到小图的邻接矩阵，小图不能太大，否则PGE的GPU内存会爆
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xzb/GCond/models/parametrized_adj.py", line 54, in forward
+    tmp_edge_embed = self.bns[ix](tmp_edge_embed)
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/nn/modules/batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "/home/xzb/anaconda3/envs/gd/lib/python3.9/site-packages/torch/nn/functional.py", line 2438, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 6.81 GiB (GPU 1; 44.56 GiB total capacity; 27.33 GiB already allocated; 1.14 GiB free; 27.36 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

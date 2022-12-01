@@ -1,0 +1,54 @@
+Namespace(gpu_id=2, dataset='ogbn-products', dis_metric='ours', epochs=2000, nlayers=2, hidden=256, lr_adj=0.01, lr_feat=0.01, lr_model=0.01, weight_decay=0.0, dropout=0.5, normalize_features=True, keep_ratio=1.0, reduction_rate=0.005, seed=1, alpha=0, debug=0, sgc=1, inner=10, outer=20, save=1, model='GCN')
+WARNING:root:The OGB package is out of date. Your version is 1.3.4, while the latest version is 1.3.5.
+pyg_data: Data(num_nodes=2449029, x=[2449029, 100], y=[2449029, 1], adj_t=[2449029, 2449029, nnz=123718280])
+split_index: {'train': tensor([     0,      1,      2,  ..., 196612, 196613, 196614]), 'valid': tensor([196615, 196616, 196617,  ..., 235935, 235936, 235937]), 'test': tensor([ 235938,  235939,  235940,  ..., 2449026, 2449027, 2449028])}
+train val test的长度: 196615 39323 2213091
+size of adj_train: (196615, 196615)
+edges in adj_train: 10903246.0
+adj_syn: (987, 987) feat_syn: torch.Size([987, 100])
+开始图凝聚！
+Epoch 100, 梯度匹配loss_avg: 0.0
+Train set results: loss= 8.6257 accuracy= 0.2913
+Test set results: loss= 6.3931 accuracy= 0.2436
+Epoch 200, 梯度匹配loss_avg: 0.0
+Train set results: loss= 21.1641 accuracy= 0.3115
+Test set results: loss= 12.9881 accuracy= 0.2668
+Epoch 300, 梯度匹配loss_avg: 0.0
+Train set results: loss= 14.5625 accuracy= 0.3127
+Test set results: loss= 9.6984 accuracy= 0.2575
+Epoch 400, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.4071 accuracy= 0.2757
+Test set results: loss= 4.0836 accuracy= 0.2227
+Epoch 500, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.6174 accuracy= 0.2373
+Test set results: loss= 4.0960 accuracy= 0.1947
+Epoch 600, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.7050 accuracy= 0.2076
+Test set results: loss= 4.1298 accuracy= 0.1819
+Epoch 700, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.5734 accuracy= 0.2064
+Test set results: loss= 4.0451 accuracy= 0.1835
+Epoch 800, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.7448 accuracy= 0.1935
+Test set results: loss= 4.1193 accuracy= 0.1698
+Epoch 900, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.6112 accuracy= 0.1479
+Test set results: loss= 4.0536 accuracy= 0.1444
+Epoch 1000, 梯度匹配loss_avg: 0.0
+Train set results: loss= 8.4153 accuracy= 0.2180
+Test set results: loss= 6.1598 accuracy= 0.2062
+Epoch 1100, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.4391 accuracy= 0.2411
+Test set results: loss= 3.8737 accuracy= 0.2113
+Epoch 1200, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.5484 accuracy= 0.2636
+Test set results: loss= 3.9393 accuracy= 0.2258
+Epoch 1300, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.4519 accuracy= 0.2670
+Test set results: loss= 3.8753 accuracy= 0.2299
+Epoch 1400, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.5071 accuracy= 0.2776
+Test set results: loss= 3.8294 accuracy= 0.2296
+Epoch 1500, 梯度匹配loss_avg: 0.0
+Train set results: loss= 4.5832 accuracy= 0.2946
+Test set results: loss= 3.8861 accuracy= 0.2385

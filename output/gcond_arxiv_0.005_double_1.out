@@ -1,0 +1,130 @@
+凝聚完了紧接着训练θ
+
+Namespace(gpu_id=3, dataset='ogbn-arxiv', dis_metric='ours', epochs=2000, nlayers=2, hidden=256, lr_adj=0.01, lr_feat=0.01, lr_model=0.01, weight_decay=0.0, dropout=0.5, normalize_features=True, keep_ratio=1.0, reduction_rate=0.005, seed=1, alpha=0, debug=0, sgc=1, inner=10, outer=20, save=1, model='GCN')
+pyg_data: Data(num_nodes=169343, x=[169343, 128], node_year=[169343, 1], y=[169343, 1], adj_t=[169343, 169343, nnz=1166243])
+split_index: {'train': tensor([     0,      1,      2,  ..., 169145, 169148, 169251]), 'valid': tensor([   349,    357,    366,  ..., 169185, 169261, 169296]), 'test': tensor([   346,    398,    451,  ..., 169340, 169341, 169342])}
+WARNING:root:The OGB package is out of date. Your version is 1.3.4, while the latest version is 1.3.5.
+size of adj_train: (90941, 90941)
+edges in adj_train: 738066.0
+adj_syn: (439, 439) feat_syn: torch.Size([439, 128])
+开始图凝聚！
+Epoch 0, 梯度匹配loss_avg: 1.5546217346191407
+Train set results: loss= 3.4148 accuracy= 0.2241
+Test set results: loss= 3.0985 accuracy= 0.2413
+Epoch 0, 梯度匹配loss_avg: 1.2945725436395832
+Train set results: loss= 3.2780 accuracy= 0.1736
+Test set results: loss= 3.3394 accuracy= 0.3087
+Epoch 0, 梯度匹配loss_avg: 1.1469363472170848
+Train set results: loss= 3.2089 accuracy= 0.3702
+Test set results: loss= 2.5680 accuracy= 0.4203
+Epoch 0, 梯度匹配loss_avg: 1.125136079102719
+Train set results: loss= 4.4265 accuracy= 0.3784
+Test set results: loss= 3.8437 accuracy= 0.4228
+Epoch 0, 梯度匹配loss_avg: 1.0425620090065038
+Train set results: loss= 4.0112 accuracy= 0.3608
+Test set results: loss= 3.7019 accuracy= 0.4146
+Epoch 0, 梯度匹配loss_avg: 0.983431327135705
+Train set results: loss= 2.9355 accuracy= 0.3340
+Test set results: loss= 2.5111 accuracy= 0.3672
+Epoch 0, 梯度匹配loss_avg: 0.9486773661017174
+Train set results: loss= 2.5789 accuracy= 0.4070
+Test set results: loss= 2.1963 accuracy= 0.4466
+Epoch 0, 梯度匹配loss_avg: 0.896183643117735
+Train set results: loss= 2.6710 accuracy= 0.4090
+Test set results: loss= 2.3439 accuracy= 0.4396
+Epoch 0, 梯度匹配loss_avg: 0.9228036487749759
+Train set results: loss= 2.3237 accuracy= 0.4368
+Test set results: loss= 2.0019 accuracy= 0.5018
+Epoch 0, 梯度匹配loss_avg: 0.9071376768714283
+Train set results: loss= 2.6520 accuracy= 0.4496
+Test set results: loss= 2.2779 accuracy= 0.4740
+Epoch 0, 梯度匹配loss_avg: 0.9328183773123979
+Train set results: loss= 2.3184 accuracy= 0.4571
+Test set results: loss= 2.0355 accuracy= 0.4930
+Epoch 0, 梯度匹配loss_avg: 0.9330662206741361
+Train set results: loss= 2.6217 accuracy= 0.4753
+Test set results: loss= 2.1648 accuracy= 0.5029
+Epoch 0, 梯度匹配loss_avg: 0.9603715970525748
+Train set results: loss= 2.2069 accuracy= 0.4649
+Test set results: loss= 1.9777 accuracy= 0.4798
+Epoch 0, 梯度匹配loss_avg: 0.9656182156256392
+Train set results: loss= 2.3690 accuracy= 0.4601
+Test set results: loss= 2.0053 accuracy= 0.5019
+Epoch 0, 梯度匹配loss_avg: 0.9423057485553449
+Train set results: loss= 2.6473 accuracy= 0.4609
+Test set results: loss= 2.2149 accuracy= 0.5065
+Epoch 0, 梯度匹配loss_avg: 0.9360092048995796
+Train set results: loss= 2.3628 accuracy= 0.4469
+Test set results: loss= 2.0526 accuracy= 0.4715
+Epoch 0, 梯度匹配loss_avg: 0.9161687680104236
+Train set results: loss= 2.3033 accuracy= 0.4593
+Test set results: loss= 2.0425 accuracy= 0.4713
+Epoch 0, 梯度匹配loss_avg: 0.9385588899803252
+Train set results: loss= 2.3590 accuracy= 0.4636
+Test set results: loss= 2.0611 accuracy= 0.4673
+Epoch 0, 梯度匹配loss_avg: 0.9508410957433727
+Train set results: loss= 2.3964 accuracy= 0.4422
+Test set results: loss= 2.0269 accuracy= 0.4601
+Epoch 0, 梯度匹配loss_avg: 0.9181532374202358
+Train set results: loss= 2.3681 accuracy= 0.4473
+Test set results: loss= 2.1612 accuracy= 0.4318
+Epoch 0, 梯度匹配loss_avg: 0.9466434252979866
+Train set results: loss= 2.6385 accuracy= 0.4594
+Test set results: loss= 2.2618 accuracy= 0.4702
+Epoch 0, 梯度匹配loss_avg: 0.9391193543265195
+Train set results: loss= 2.2546 accuracy= 0.4505
+Test set results: loss= 2.0673 accuracy= 0.4359
+Epoch 0, 梯度匹配loss_avg: 0.9407806188525518
+Train set results: loss= 2.5176 accuracy= 0.4628
+Test set results: loss= 2.3731 accuracy= 0.4553
+Epoch 0, 梯度匹配loss_avg: 0.9549163144358063
+Train set results: loss= 2.5628 accuracy= 0.4750
+Test set results: loss= 2.2556 accuracy= 0.4961
+Epoch 0, 梯度匹配loss_avg: 0.9407428352160303
+Train set results: loss= 2.2462 accuracy= 0.4635
+Test set results: loss= 2.1253 accuracy= 0.4435
+Epoch 0, 梯度匹配loss_avg: 0.9387379016636878
+Train set results: loss= 2.1612 accuracy= 0.4819
+Test set results: loss= 1.9220 accuracy= 0.4827
+Epoch 0, 梯度匹配loss_avg: 0.9570510179373428
+Train set results: loss= 2.0853 accuracy= 0.4867
+Test set results: loss= 1.8755 accuracy= 0.5073
+Epoch 0, 梯度匹配loss_avg: 0.9360673943755576
+Train set results: loss= 2.1809 accuracy= 0.4862
+Test set results: loss= 2.0231 accuracy= 0.4759
+Epoch 0, 梯度匹配loss_avg: 0.9295549771781907
+Train set results: loss= 2.1363 accuracy= 0.4763
+Test set results: loss= 2.0162 accuracy= 0.4859
+Epoch 0, 梯度匹配loss_avg: 0.9060377075562766
+Train set results: loss= 2.0409 accuracy= 0.5025
+Test set results: loss= 1.9846 accuracy= 0.4769
+Epoch 0, 梯度匹配loss_avg: 0.9556479001621093
+Train set results: loss= 2.3951 accuracy= 0.4874
+Test set results: loss= 2.1580 accuracy= 0.5051
+Epoch 0, 梯度匹配loss_avg: 0.9313181688695258
+Train set results: loss= 2.0198 accuracy= 0.5036
+Test set results: loss= 1.8759 accuracy= 0.5089
+Epoch 0, 梯度匹配loss_avg: 0.9287007715365705
+Train set results: loss= 2.3636 accuracy= 0.4978
+Test set results:Epoch 0, 梯度匹配loss_avg: 0.9386268552903613
+Train set results: loss= 1.9982 accuracy= 0.4965
+Test set results: loss= 1.9267 accuracy= 0.4808
+Epoch 0, 梯度匹配loss_avg: 0.9334567755073998
+Train set results: loss= 1.9793 accuracy= 0.4966
+Test set results: loss= 1.9278 accuracy= 0.4865
+Epoch 0, 梯度匹配loss_avg: 0.9350586825374084
+Train set results: loss= 2.3303 accuracy= 0.4930
+Test set results: loss= 2.1331 accuracy= 0.4939
+Epoch 0, 梯度匹配loss_avg: 0.9579836435294482
+Train set results: loss= 1.9782 accuracy= 0.5072
+Test set results: loss= 1.9291 accuracy= 0.4953
+Epoch 0, 梯度匹配loss_avg: 0.9040793352227522
+Train set results: loss= 1.9620 accuracy= 0.5026
+Test set results: loss= 1.8948 accuracy= 0.4925
+Epoch 0, 梯度匹配loss_avg: 0.9155369491067232
+Train set results: loss= 2.0349 accuracy= 0.5002
+Test set results: loss= 1.8678 accuracy= 0.5106
+Epoch 0, 梯度匹配loss_avg: 0.8865530001027531
+Train set results: loss= 2.0038 accuracy= 0.5010
+Test set results: loss= 1.8604 accuracy= 0.5067
+图凝聚用时: 84140 秒
